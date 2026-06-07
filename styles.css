@@ -12,38 +12,42 @@
   --color-bg-card-hover: rgba(26, 29, 38, 0.85);
   --color-border: rgba(212, 175, 55, 0.15);
   --color-border-glow: rgba(212, 175, 55, 0.4);
-  
+
   --color-gold-light: #f3e5ab;
-  --color-gold: #D4AF37; /* Metallic Gold */
+  --color-gold: #D4AF37;
+  /* Metallic Gold */
   --color-gold-dark: #aa841c;
-  
+
   --color-text-primary: #f8f9fa;
   --color-text-secondary: #a0a5b5;
   --color-text-muted: #626875;
-  
+
   --font-serif: 'Cormorant Garamond', serif;
   --font-sans: 'Outfit', sans-serif;
-  
+
   --transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   --transition-fast: all 0.2s ease;
-  
+
   --shadow-gold: 0 10px 30px -10px rgba(212, 175, 55, 0.25);
   --shadow-card: 0 15px 35px rgba(0, 0, 0, 0.5);
   --shadow-inset: inset 0 1px 1px rgba(255, 255, 255, 0.05);
-  
+
   --header-height: 80px;
 }
 
 /* ==========================================================================
    RESET & BASE STYLES
    ========================================================================== */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -74,9 +78,20 @@ body {
   filter: blur(40px);
 }
 
-.blob-1 { top: 10%; left: -200px; }
-.blob-2 { top: 40%; right: -250px; }
-.blob-3 { top: 80%; left: 10%; }
+.blob-1 {
+  top: 10%;
+  left: -200px;
+}
+
+.blob-2 {
+  top: 40%;
+  right: -250px;
+}
+
+.blob-3 {
+  top: 80%;
+  left: 10%;
+}
 
 @media (max-width: 768px) {
   .bg-glow-blob {
@@ -100,7 +115,9 @@ ul {
   list-style: none;
 }
 
-button, input, textarea {
+button,
+input,
+textarea {
   font-family: inherit;
   font-size: inherit;
   color: inherit;
@@ -112,7 +129,10 @@ button, input, textarea {
 /* ==========================================================================
    TYPOGRAPHY
    ========================================================================== */
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--font-serif);
   font-weight: 600;
   line-height: 1.2;
@@ -255,6 +275,45 @@ p {
   justify-content: space-between;
 }
 
+/* -------------------------------
+   LOGOOBOX
+------------------------------- */
+.logobox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  /* space between image and text */
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #fff;
+}
+
+.logobox img {
+  width: 45px;
+  /* adjust as needed */
+  height: 45px;
+  /* adjust as needed */
+  object-fit: contain;
+  border-radius: 0;
+  /* no rounded corners */
+  flex-shrink: 0;
+}
+
+/* Mobile adjustments for the logo */
+@media (max-width: 768px) {
+  .logobox {
+    font-size: 1rem;
+  }
+
+  .logobox img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+
 .logo {
   font-family: var(--font-serif);
   font-size: 1.5rem;
@@ -343,7 +402,7 @@ p {
   .mobile-nav-toggle {
     display: block;
   }
-  
+
   .nav-links {
     position: fixed;
     top: 0;
@@ -359,32 +418,35 @@ p {
     z-index: 100;
     transform: translateX(100%);
     transition: var(--transition-smooth);
-    box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
   }
-  
+
   .nav-links.active {
     transform: translateX(0);
   }
-  
+
   .nav-cta {
-    display: none; /* hidden on tablet/mobile header */
+    display: none;
+    /* hidden on tablet/mobile header */
   }
-  
+
   .nav-links .nav-cta-mobile {
     display: block !important;
     margin-top: 1.5rem;
     width: 100%;
     text-align: center;
   }
-  
+
   /* hamburger transitions */
   .mobile-nav-toggle.active .hamburger span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
     background-color: var(--color-gold);
   }
+
   .mobile-nav-toggle.active .hamburger span:nth-child(2) {
     opacity: 0;
   }
+
   .mobile-nav-toggle.active .hamburger span:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
     background-color: var(--color-gold);
@@ -536,25 +598,31 @@ p {
   .hero {
     padding: calc(var(--header-height) + 2rem) 0 4rem 0;
   }
+
   .hero-container {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 4rem;
   }
+
   .hero-desc {
     margin: 0 auto 2.5rem auto;
   }
+
   .hero-actions {
     justify-content: center;
   }
+
   .hero-image-wrapper {
     max-width: 390px;
     margin: 0 auto;
   }
+
   .hero-floating-card {
     left: 10px;
     bottom: -15px;
   }
+
   .hero-title {
     font-size: 3rem;
   }
@@ -564,12 +632,15 @@ p {
   .hero-title {
     font-size: 2.4rem;
   }
+
   .hero-actions .btn {
     width: 100%;
   }
+
   .logo {
     font-size: 1.25rem;
   }
+
   .book {
     width: 220px;
     height: 314px;
@@ -649,9 +720,11 @@ p {
   .about {
     padding: 5rem 0;
   }
+
   .quote-text {
     font-size: 1.65rem;
   }
+
   .about-grid {
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -798,6 +871,7 @@ p {
   .programs {
     padding: 5rem 0;
   }
+
   .programs-header {
     flex-direction: column;
     align-items: flex-start;
@@ -954,6 +1028,7 @@ p {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
   .pillar-item {
     padding: 2.5rem 1.5rem;
   }
@@ -1132,6 +1207,7 @@ p {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .book-wrapper {
     margin-bottom: 2rem;
   }
@@ -1141,6 +1217,7 @@ p {
   .book-features {
     grid-template-columns: 1fr;
   }
+
   .shop-actions .btn {
     width: 100%;
   }
@@ -1284,6 +1361,7 @@ p {
   .testimonial-card {
     padding: 2.5rem 1.8rem;
   }
+
   .testimonial-quote {
     font-size: 1.35rem;
   }
@@ -1380,9 +1458,11 @@ p {
   .faq-trigger {
     padding: 1.2rem 1.5rem;
   }
+
   .faq-trigger h4 {
     font-size: 1.05rem;
   }
+
   .faq-inner {
     padding: 0 1.5rem 1.5rem 1.5rem;
   }
@@ -1565,9 +1645,11 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 4rem;
   }
+
   .contact-info {
     order: 2;
   }
+
   .contact-form-card {
     order: 1;
   }
@@ -1578,6 +1660,7 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
   .contact-form-card {
     padding: 2.5rem 1.5rem;
   }
@@ -1640,6 +1723,7 @@ textarea.form-input {
     text-align: center;
     gap: 2rem;
   }
+
   .newsletter-form {
     max-width: 100%;
   }
@@ -1734,6 +1818,7 @@ textarea.form-input {
     grid-template-columns: 1fr;
     gap: 3rem;
   }
+
   .footer-bottom {
     flex-direction: column;
     text-align: center;
