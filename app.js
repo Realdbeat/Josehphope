@@ -318,4 +318,18 @@ document.addEventListener('DOMContentLoaded', () => {
       contactForm.reset();
     });
   }
+
+  // ==========================================================================
+  // LAZY LOAD YOUTUBE VIDEO
+  // ==========================================================================
+  const videoPlayBtn = document.getElementById('video-play-btn');
+  const videoContainer = document.getElementById('video-card');
+
+  if (videoPlayBtn && videoContainer) {
+    videoPlayBtn.addEventListener('click', () => {
+      videoContainer.innerHTML = `
+        <iframe src="https://www.youtube.com/embed/xdvQrGHbUXo?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      `;
+    });
+  }
 });
