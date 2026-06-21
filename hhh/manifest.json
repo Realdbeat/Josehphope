@@ -1,0 +1,52 @@
+{
+  "name": "Joseph Hope Global",
+  "short_name": "JHG",
+  "description": "Grow with Purpose. Lead with Impact. Empowering people through practical knowledge, proven strategies, and transformational coaching.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07080a",
+  "theme_color": "#D4AF37",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["education", "lifestyle", "business"],
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "images/joseph_hope_portrait.png",
+      "sizes": "390x500",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Joseph Hope Global Home"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Book Coaching",
+      "short_name": "Coaching",
+      "description": "Book a one-on-one coaching session",
+      "url": "https://selar.com/m/joseph-ettah2746639",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Get E-Book",
+      "short_name": "E-Book",
+      "description": "Purchase the Disciplined Action E-Book",
+      "url": "https://selar.com/m/joseph-ettah2746639",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
+}
